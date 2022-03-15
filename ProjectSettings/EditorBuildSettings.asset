@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GridSys.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/GridRaycast.unity
+    guid: 7f6b7c175d64def40a93ef190f3332d0
   m_configObjects: {}

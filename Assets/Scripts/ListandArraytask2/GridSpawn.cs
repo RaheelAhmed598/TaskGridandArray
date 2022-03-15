@@ -8,9 +8,8 @@ public class GridSpawn : MonoBehaviour
     [SerializeField] public int height = 10;
     [SerializeField] public int width = 10;
     [SerializeField] public GameObject cubePrefab;
-    [SerializeField] public GameObject player;
     private GameObject[,] grid;
-    //private List<string> bridsList = new List<string>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +18,6 @@ public class GridSpawn : MonoBehaviour
         birds.Add("pigeon");
         birds.Add("sparrow");
         birds.Add("Eagle");
-        //bridsList.Add("sparrow"); 
-        //bridsList.Add("pigeon");
-        //bridsList.Add("sparrow"); 
-        //bridsList.Add("pigeon");
-        //bridsList.Add("sparrow");
 
        
         grid = new GameObject[width, height];
@@ -35,8 +29,7 @@ public class GridSpawn : MonoBehaviour
                 // you could also add a padding /space between the cubes here
                 grid[x, z] = Instantiate(cubePrefab, new Vector3(x * 2, 0, z * 2), Quaternion.identity);
                 grid[x, z].GetComponentInChildren<TextMesh>().text = birds[Random.Range(0, birds.Count)];
-                 // For convenience we name the cubes after their position:
-                //grid[x, z].name = "Cube (" + x + ", " + z + ")";
+                
 
             }
         }
